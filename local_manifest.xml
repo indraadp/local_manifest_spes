@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<!-- Remote -->
+	<remote name="parixshit" fetch="https://github.com/parixshit-ci/" />
+
+	<!-- Trees -->
+	<project path="device/xiaomi/spes" name="device_xiaomi_spes" remote="parixshit" revision="13.0" clone-depth="1" />
+	<project path="vendor/xiaomi/spes" name="vendor_xiaomi_spes" remote="parixshit" revision="13.0" clone-depth="1" />
+	<project path="kernel/xiaomi/spes" name="kernel_xiaomi_spes" remote="parixshit" revision="13.0" clone-depth="1" />
+
+	<!-- Custom -->
+	<remove-project name="LineageOS/android_hardware_lineage_compat" />
+	<project path="hardware/xiaomi" name="hardware_xiaomi" remote="parixshit" revision="13.0" clone-depth="1" />
+</manifest>
