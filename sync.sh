@@ -1,4 +1,5 @@
 # Remove
+rm -rf hardware/st/nfc
 rm -rf vendor/qcom/opensource/commonsys/display
 rm -rf vendor/qcom/opensource/commonsys-intf/display
 
@@ -10,6 +11,7 @@ git clone -b tokui https://github.com/parixshit-ci/proprietary_vendor_xiaomi.git
 
 # Hardware
 git clone -b topaz https://github.com/aospa/android_hardware_xiaomi.git hardware/xiaomi
+git clone -b topaz https://github.com/AOSPA/android_hardware_st_nfc.git hardware/st/nfc
 git clone -b topaz-865 https://github.com/aospa/android_hardware_qcom_gps.git hardware/qcom/gps
 git clone -b topaz-865 https://github.com/aospa/android_hardware_qcom_media.git hardware/qcom/media
 git clone -b topaz-865 https://github.com/aospa/android_hardware_qcom_display.git hardware/qcom/display

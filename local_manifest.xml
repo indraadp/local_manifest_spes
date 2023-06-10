@@ -12,6 +12,8 @@
 
 	<!-- Hardware -->
 	<project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="aospa" revision="topaz" />
+	<remove-project name="platform/hardware/st/nfc" />
+	<project path="hardware/st/nfc" name="AOSPA/android_hardware_st_nfc" remote="aospa" revision="topaz" />
 	<project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="aospa" revision="topaz-865" />
 	<project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="aospa" revision="topaz-865" />
 	<project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="aospa" revision="topaz-865" />
