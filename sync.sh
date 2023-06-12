@@ -1,5 +1,9 @@
 # Remove
 rm -rf device/qcom/common
+rm -rf hardware/qcom-caf/bengal/audio
+rm -rf hardware/qcom-caf/bengal/display
+rm -rf hardware/qcom-caf/bengal/media
+rm -rf hardware/qcom-caf/bengal/gps
 
 # Device
 git clone -b tiramisu https://github.com/parixshit-ci/device_xiaomi_spes.git device/xiaomi/spes
@@ -13,8 +17,14 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b thirteen https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
 
+# Hardware (QCOM)
+git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_audio.git hardware/qcom-caf/bengal/audio
+git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
+git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_media.git hardware/qcom-caf/bengal/media
+git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_gps.git hardware/qcom-caf/bengal/gps
+
 # Device (QCOM)
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common
+git clone -b tiramisu https://github.com/parixshit-ci/device_qcom_common.git device/qcom/common
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
@@ -25,6 +35,7 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_core-utils.git vendor/qcom/opensource/core-utils
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git vendor/qcom/opensource/fm-commonsys
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git vendor/qcom/opensource/interfaces
+git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
 . build/envsetup.sh
