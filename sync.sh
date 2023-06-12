@@ -1,5 +1,8 @@
 # Remove
 rm -rf device/qcom/common
+rm -rf hardware/xiaomi
+rm -rf vendor/qcom/opensource/fm-commonsys
+rm -rf vendor/qcom/opensource/interfaces
 
 # Device
 git clone -b tiramisu https://github.com/parixshit-ci/device_xiaomi_spes.git device/xiaomi/spes
@@ -16,7 +19,7 @@ git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git har
 # Device (QCOM)
 git clone -b tiramisu https://github.com/parixshit-ci/device_qcom_common.git device/qcom/common
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
+git clone -b tiramisu https://github.com/parixshit-ci/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git device/qcom/vendor-common
 
