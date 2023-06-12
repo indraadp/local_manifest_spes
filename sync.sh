@@ -1,9 +1,5 @@
 # Remove
 rm -rf device/qcom/common
-rm -rf hardware/qcom-caf/bengal/audio
-rm -rf hardware/qcom-caf/bengal/display
-rm -rf hardware/qcom-caf/bengal/media
-rm -rf hardware/qcom-caf/bengal/gps
 
 # Device
 git clone -b tiramisu https://github.com/parixshit-ci/device_xiaomi_spes.git device/xiaomi/spes
@@ -16,12 +12,6 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 # Hardware
 git clone -b thirteen https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
-
-# Hardware (QCOM)
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_audio.git hardware/qcom-caf/bengal/audio
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_media.git hardware/qcom-caf/bengal/media
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_gps.git hardware/qcom-caf/bengal/gps
 
 # Device (QCOM)
 git clone -b tiramisu https://github.com/parixshit-ci/device_qcom_common.git device/qcom/common
