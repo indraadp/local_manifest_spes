@@ -1,6 +1,6 @@
 # Remove
 rm -rf device/qcom/common
-rm -rf hardware/xiaomi
+# rm -rf hardware/xiaomi
 rm -rf hardware/st/nfc
 rm -rf vendor/qcom/opensource/fm-commonsys
 rm -rf vendor/qcom/opensource/interfaces
@@ -14,7 +14,7 @@ git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_xiaomi_sm
 git clone --depth=1 -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
 
 # Hardware
-git clone --depth=1 -b thirteen https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi
+# git clone --depth=1 -b thirteen https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi
 git clone --depth=1 -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
 
 # Device (QCOM)
