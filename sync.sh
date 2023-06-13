@@ -35,3 +35,6 @@ git clone --depth=1 -b thirteen https://github.com/PixelExperience/vendor_qcom_o
 . build/envsetup.sh
 lunch evolution_spes-user
 mka evolution
+
+cd .. && chmod 600 ssh-key
+scp -i ssh-key evoX/out/target/product/spes/evolution_spes-ota* parixshit@frs.sourceforge.net:/home/frs/project/parixshit/Evolution
