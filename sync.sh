@@ -1,5 +1,6 @@
 # Remove
 rm -rf hardware/st/nfc
+rm -rf packages/resources/devicesettings
 rm -rf vendor/qcom/opensource/interfaces
 rm -rf vendor/qcom/opensource/fm-commonsys
 
@@ -12,6 +13,9 @@ git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/devic
 
 git clone --depth=1 -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_spes.git vendor/xiaomi/spes
 git clone --depth=1 -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
+
+# Packages
+git clone --depth=1 -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # Hardware
 git clone --depth=1 -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
