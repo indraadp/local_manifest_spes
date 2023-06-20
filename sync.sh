@@ -7,12 +7,17 @@ NC='\033[0m' # No Color
 
 # Define a function to simplify cloning
 clone_repo() {
+    if [ -d "$3" ]; then
+        echo -e "${RED}Skipping cloning. Directory $3 already exists.${NC}"
+        return
+    fi
+
     echo -e "${GREEN}Cloning repository: $2 (Branch: $1)${NC}"
     git clone --depth=1 -b "$1" "$2" "$3"
 }
 
+
 # Remove unnecessary directories
-echo -e "${RED}Removing unnecessary directories...${NC}"
 directories=(
     "hardware/st/nfc"
     "packages/resources/devicesettings"
@@ -52,7 +57,7 @@ clone_repo "thirteen" "https://github.com/PixelExperience/hardware_qcom-caf_beng
 clone_repo "13" "https://github.com/parixshit-ci/device_qcom_common.git" "device/qcom/common"
 clone_repo "thirteen" "https://github.com/PixelExperience-Devices/device_qcom_qssi.git" "device/qcom/qssi"
 clone_repo "thirteen" "https://github.com/PixelExperience-Devices/device_qcom_wlan.git" "device/qcom/wlan"
-clone_repo "thirteen" "https://github.com/parixshit-ci/device_qcom_common-sepolicy.git" "device/qcom/common-sepolicy"
+clone_repo "13" "https://github.com/parixshit-ci/device_qcom_common-sepolicy.git" "device/qcom/common-sepolicy"
 clone_repo "thirteen" "https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git" "device/qcom/vendor-common"
 
 # Vendor (QCOM)
