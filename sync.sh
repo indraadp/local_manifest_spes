@@ -19,8 +19,6 @@ clone_repo() {
 
 # Remove unnecessary directories
 directories=(
-    "hardware/st/nfc"
-    "packages/resources/devicesettings"
     "vendor/qcom/opensource/interfaces"
     "vendor/qcom/opensource/fm-commonsys"
 )
@@ -67,10 +65,11 @@ clone_repo "thirteen" "https://github.com/PixelExperience/vendor_qcom_opensource
 clone_repo "thirteen" "https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git" "vendor/qcom/opensource/fm-commonsys"
 clone_repo "thirteen" "https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git" "vendor/qcom/opensource/commonsys/dpm"
 clone_repo "thirteen" "https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git" "vendor/qcom/opensource/commonsys-intf/bluetooth"
+clone_repo "thirteen" "https://github.com/PixelExperience/vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um.git" "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um"
 
 # . build/envsetup.sh
-# lunch derp_spes-user
-# mka derp
+# lunch arrow_spes-user
+# m otapackage
 
 # cd .. && chmod 600 ssh-key
 # scp -i ssh-key evoX/out/target/product/spes/evolution_spes-ota* parixshit@frs.sourceforge.net:/home/frs/project/parixshit/Evolution
