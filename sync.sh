@@ -12,6 +12,7 @@ rm -rf vendor/qcom/opensource/fm-commonsys
 # Device
 git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_xiaomi_spes.git device/xiaomi/spes
 git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_xiaomi_sm6225-common.git device/xiaomi/sm6225-common
+git clone --depth=1 -b topaz https://github.com/CHRISL7/android_device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
 
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/kernel_xiaomi_sm6225.git kernel/xiaomi/sm6225
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
