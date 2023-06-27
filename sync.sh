@@ -10,9 +10,9 @@ rm -rf vendor/qcom/opensource/interfaces
 rm -rf vendor/qcom/opensource/fm-commonsys
 
 # Device
-git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_xiaomi_spes.git device/xiaomi/spes
-git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_xiaomi_sm6225-common.git device/xiaomi/sm6225-common
-git clone --depth=1 -b topaz https://github.com/CHRISL7/android_device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
+git clone --depth=1 -b tiramisu https://github.com/sm6225/device_xiaomi_spes-fork.git device/xiaomi/spes
+git clone --depth=1 -b tiramisu https://github.com/sm6225/device_xiaomi_sm6225-common-fork.git device/xiaomi/sm6225-common
+git clone --depth=1 -b tiramisu https://github.com/CHRISL7/android_device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
 
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/kernel_xiaomi_sm6225.git kernel/xiaomi/sm6225
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
@@ -29,10 +29,10 @@ git clone --depth=1 -b thirteen https://github.com/PixelExperience/hardware_st_n
 # git clone --depth=1 -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
 
 # Device (QCOM)
-git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_qcom_common.git device/qcom/common
+git clone --depth=1 -b thirteen https://github.com/sm6225/device_qcom_common.git device/qcom/common
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
-git clone --depth=1 -b tiramisu https://github.com/parixshit-ci/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
+git clone --depth=1 -b thirteen https://github.com/sm6225/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git device/qcom/vendor-common
 
 # Vendor (QCOM)
@@ -47,4 +47,4 @@ git clone --depth=1 -b thirteen https://github.com/PixelExperience/vendor_qcom_o
 # mka evolution
 
 # cd .. && chmod 600 ssh-key
-# scp -i ssh-key evoX/out/target/product/spes/evolution_spes-ota* parixshit@frs.sourceforge.net:/home/frs/project/parixshit/Evolution
+# scp -i ssh-key evo/out/target/product/spes/evolution_spes-ota* parixshit@frs.sourceforge.net:/home/frs/project/parixshit/Evolution
