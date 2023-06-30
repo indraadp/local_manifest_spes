@@ -6,11 +6,11 @@ rm -rf vendor/qcom/opensource/interfaces
 rm -rf vendor/qcom/opensource/fm-commonsys
 
 # Device
-git clone -b thirteen https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
-git clone -b thirteen https://github.com/parixxshit/device_xiaomi_sm6225-common.git device/xiaomi/sm6225-common
+git clone -b cherish https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
+git clone -b cherish https://github.com/parixxshit/device_xiaomi_sm6225-common.git device/xiaomi/sm6225-common
 
 git clone --depth=1 -b thirteen https://github.com/PixelExperience-Devices/kernel_xiaomi_sm6225.git kernel/xiaomi/sm6225
-git clone -b thirteen https://github.com/parixxshit/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
+git clone -b cherish https://github.com/parixxshit/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
 
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_spes.git vendor/xiaomi/spes
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
@@ -28,10 +28,10 @@ git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_benga
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
 
 # Device (QCOM)
-git clone -b thirteen https://github.com/parixxshit/device_qcom_common.git device/qcom/common
+git clone -b cherish https://github.com/parixxshit/device_qcom_common.git device/qcom/common
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
-git clone -b thirteen https://github.com/parixxshit/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
+git clone -b cherish https://github.com/parixxshit/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git device/qcom/vendor-common
 
 # Vendor (QCOM)
