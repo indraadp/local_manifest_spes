@@ -42,5 +42,11 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
+# Patch (vendor: cherish: Split 4.19 SoC family)
+cd vendor/cherish
+git fetch https://github.com/parixxshit/android_vendor_cherish.git
+git cherry-pick 6a75d6a275b2b2b40cf95ce7e2786918e43b3efa
+cd ../..
+
 # . build/envsetup.sh
 # brunch cherish_spes-user
