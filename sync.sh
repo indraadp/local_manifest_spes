@@ -27,17 +27,18 @@ git clone -b topaz-legacy-component https://github.com/AOSPA/android_hardware_qc
 
 # Device (QCOM)
 git clone -b topaz https://github.com/AOSPA/android_device_qcom_common.git device/qcom/common
+git clone -b topaz https://github.com/AOSPA/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr
 
 # Vendor (QCOM)
 git clone -b topaz https://github.com/ThankYouMario/proprietary_vendor_qcom_common.git vendor/qcom/common
 git clone -b topaz-bengal https://github.com/AOSPA/android_hardware_qcom_audio.git vendor/qcom/opensource/audio-hal/primary-hal
 git clone -b topaz-legacy https://github.com/AOSPA/android_vendor_qcom_opensource_data-ipa-cfg-mgr.git vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
+git clone -b LA.QSSI.13.0.r1-10700-qssi.0 https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/fm-commonsys.git vendor/qcom/opensource/commonsys/fm
 
 # Patch
-cd vendor/qcom/opensource/interfaces
-git fetch https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git
-git cherry-pick 0a1e849
-cd ../../../..
+cd vendor/qcom/opensource/interfaces && git fetch https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git
+git cherry-pick 0a1e849 && cd ../../../..
+cd hardware/qcom/display && git revert 167e47de81ce1fe06db2b4ddf3b4b001e06002ae && cd ../../..
 
 # source build/envsetup.sh
 # lunch p404_spes-user
