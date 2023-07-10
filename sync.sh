@@ -1,6 +1,5 @@
 # Remove
 rm -rf hardware/st/nfc
-rm -rf hardware/xiaomi
 rm -rf packages/apps/Dialer
 rm -rf packages/apps/Contacts
 rm -rf packages/apps/Messaging
@@ -21,10 +20,10 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b topaz https://gitlab.com/ThankYouMario/android_vendor_xiaomi_sm6225-commmon-miuicamera.git vendor/xiaomi/sm6225-common-miuicamera
 
 # Packages
-git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git packages/apps/Dialer
 git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
 git clone -b tokui https://github.com/P-404/android_packages_apps_Messaging.git packages/apps/Messaging
+git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # Hardware
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
