@@ -47,7 +47,6 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git vendor/qcom/opensource/interfaces
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
-git clone -b LA.QSSI.13.0.r1-10700-qssi.0 https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/fm-commonsys.git vendor/qcom/opensource/commonsys/fm
 
 # Patch
 cd vendor/derp
