@@ -47,7 +47,7 @@ git clone -b LA.QSSI.13.0.r1-10700-qssi.0 https://git.codelinaro.org/clo/la/plat
 # Patch
 cd vendor/derp
 git fetch https://github.com/parixxshit/vendor_derp.git
-git cherry-pick 681503f496ff04f41b2718fc85f4b435f1e6f9ca^..657f4a52b1acdcafbe68abb1fc05eba30363371f
+git cherry-pick 82a4247dfd884cec0a177fb1b4c9407da7abc863 4edc8123ba3dc98f515f25a17ed3d97af39f6f22
 cd ../..
 
 # . build/envsetup.sh
