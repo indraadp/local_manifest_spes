@@ -1,4 +1,5 @@
 # Remove
+rm -rf hardware/lineage/compat
 rm -rf hardware/google/pixel/kernel_headers
 
 # Clone
@@ -7,13 +8,8 @@ git clone -b 13.0 https://github.com/parixxshit/android_vendor_xiaomi_spes vendo
 git clone --depth=1 -b 13.0 https://github.com/parixxshit/android_kernel_xiaomi_spes kernel/xiaomi/spes
 
 # Hardware
-git clone -b lineage-20 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
-
-# Patch
-cd hardware/lineage/compat
-git fetch https://github.com/Deepak5310/android_hardware_lineage_compat
-git cherry-pick 16939cb
-cd ../../..
+git clone -b lineage-20.0 https://github.com/parixxshit/android_hardware_xiaomi hardware/xiaomi
+git clone -b lineage-20.0 https://github.com/parixxshit/android_hardware_lineage_compat hardware/lineage/compat
 
 # Brunch
 . build/envsetup.sh
