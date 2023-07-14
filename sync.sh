@@ -12,8 +12,8 @@ git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes.git device/xiao
 git clone -b 13 https://github.com/parixxshit/device_xiaomi_sm6225-common.git device/xiaomi/sm6225-common
 git clone -b topaz https://github.com/AOSPA/android_device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
 
-git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
 git clone -b thirteen https://github.com/PixelExperience-Devices/kernel_xiaomi_sm6225.git kernel/xiaomi/sm6225
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
 
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_spes.git vendor/xiaomi/spes
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
