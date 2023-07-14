@@ -1,58 +1,20 @@
 # Remove
-rm -rf hardware/st/nfc
-rm -rf packages/apps/Dialer
-rm -rf packages/apps/Contacts
-rm -rf packages/apps/Messaging
-rm -rf packages/resources/devicesettings
-rm -rf vendor/qcom/opensource/interfaces
-rm -rf vendor/qcom/opensource/fm-commonsys
+rm -rf hardware/google/pixel/kernel_headers
 
-# Device
-git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
-git clone -b 13 https://github.com/parixxshit/device_xiaomi_sm6225-common.git device/xiaomi/sm6225-common
-git clone -b topaz https://github.com/AOSPA/android_device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
-
-git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes-kernel.git device/xiaomi/spes-kernel
-git clone -b thirteen https://github.com/PixelExperience-Devices/kernel_xiaomi_sm6225.git kernel/xiaomi/sm6225
-
-git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_spes.git vendor/xiaomi/spes
-git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
-git clone -b topaz https://gitlab.com/ThankYouMario/android_vendor_xiaomi_sm6225-commmon-miuicamera.git vendor/xiaomi/sm6225-common-miuicamera
-
-# Packages
-git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git packages/apps/Dialer
-git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
-git clone -b tokui https://github.com/P-404/android_packages_apps_Messaging.git packages/apps/Messaging
-git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
+# Clone
+git clone -b 13.0 https://github.com/parixxshit/android_device_xiaomi_spes device/xiaomi/spes
+git clone -b 13.0 https://github.com/parixxshit/android_vendor_xiaomi_spes vendor/xiaomi/spes
+git clone --depth=1 -b 13.0 https://github.com/parixxshit/android_kernel_xiaomi_spes kernel/xiaomi/spes
 
 # Hardware
-git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
-git clone -b thirteen https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi
-
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_gps.git hardware/qcom-caf/bengal/gps
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_media.git hardware/qcom-caf/bengal/media
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_audio.git hardware/qcom-caf/bengal/audio
-git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
-
-# Device (QCOM)
-git clone -b 13 https://github.com/parixxshit/device_qcom_common.git device/qcom/common
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
-git clone -b 13 https://github.com/parixxshit/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git device/qcom/vendor-common
-
-# Vendor (QCOM)
-git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_qcom_common.git vendor/qcom/common
-git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_core-utils.git vendor/qcom/opensource/core-utils
-git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git vendor/qcom/opensource/interfaces
-git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
-git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
+git clone -b lineage-20 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
 
 # Patch
-cd vendor/derp
-git fetch https://github.com/parixxshit/vendor_derp.git
-git cherry-pick 82a4247dfd884cec0a177fb1b4c9407da7abc863 4edc8123ba3dc98f515f25a17ed3d97af39f6f22
-cd ../..
+cd hardware/lineage/compat
+git fetch https://github.com/Deepak5310/android_hardware_lineage_compat
+git cherry-pick 16939cb
+cd ../../..
 
-# . build/envsetup.sh
-# lunch derp_spes-user && mka derp
+# Brunch
+. build/envsetup.sh
+brunch lineage_spes-user
