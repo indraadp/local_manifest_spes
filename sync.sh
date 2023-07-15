@@ -46,31 +46,25 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 # Patch packages/resources/devicesettings
 cd packages/resources/devicesettings
 git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
-git cherry-pick ac8b243^..2a3307e
+git cherry-pick ac8b243^..2a3307e # Add custom strings
 cd ../..
 
 # Patch packages/apps/Updater
 cd apps/Updater
 git fetch https://github.com/parixxshit/packages_apps_Updater.git
-git cherry-pick 7554a70
+git cherry-pick 7554a70 # Update server and changelog url
 cd ../../..
 
 # Patch vendor/derp
 cd vendor/derp
 git fetch https://github.com/parixxshit/vendor_derp.git -t 13-custom
-git cherry-pick 95d7761^..cf1f878
-cd ..
-
-# Patch vendor/qcom/opensource/interfaces
-cd qcom/opensource/interfaces
-git fetch https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git
-git cherry-pick 0a1e849
+git cherry-pick 95d7761^..cf1f878 # Last 5
 cd ..
 
 # Patch vendor/qcom/opensource/fm-commonsys
 cd qcom/opensource/fm-commonsys
 git fetch https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git
-git cherry-pick 74f4211
+git cherry-pick 74f4211 # Define soong namespace
 cd ../../../..
 
 . build/envsetup.sh
