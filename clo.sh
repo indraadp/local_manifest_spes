@@ -47,7 +47,7 @@ cd ..
 
 # Patch vendor/qcom/opensource/fm-commonsys
 cd fm-commonsys
-https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git
+git fetch https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git
 git cherry-pick 74f4211
 cd ../../../..
 
