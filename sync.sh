@@ -47,8 +47,8 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 
 # Patch vendor/derp
 cd vendor/derp
-git fetch https://github.com/parixxshit/vendor_derp.git
-git cherry-pick 82a4247 4edc812
+git fetch https://github.com/parixxshit/vendor_derp.git -t 13-custom
+git cherry-pick 95d7761^..cf1f878
 cd ..
 
 # Patch vendor/qcom/opensource/interfaces
