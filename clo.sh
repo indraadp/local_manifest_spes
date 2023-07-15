@@ -23,9 +23,9 @@ git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_benga
 # Device (QCOM)
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common # Adapt FCM
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common # Adapt FCM `lineage`
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git device/qcom/vendor-common
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common-sepolicy.git device/qcom/common-sepolicy # Adapt Sepolicy
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common-sepolicy.git device/qcom/common-sepolicy # Adapt Sepolicy `lineage`
 
 # Vendor (QCOM)
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_qcom_common.git vendor/qcom/common
@@ -35,9 +35,9 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
 # Patch
-cd vendor/derp
+cd vendor/lineage
 git fetch https://github.com/parixxshit/vendor_derp.git
-git cherry-pick 82a4247dfd884cec0a177fb1b4c9407da7abc863 4edc8123ba3dc98f515f25a17ed3d97af39f6f22
+git cherry-pick 82a4247 4edc812
 cd ../..
 
 . build/envsetup.sh
