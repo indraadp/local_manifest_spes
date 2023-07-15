@@ -5,7 +5,6 @@ rm -rf packages/apps/Contacts
 rm -rf packages/apps/Messaging
 rm -rf packages/resources/devicesettings
 rm -rf vendor/qcom/opensource/interfaces
-rm -rf vendor/qcom/opensource/fm-commonsys
 
 # Device
 git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
@@ -48,11 +47,17 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
-# Patch
+# Patch vendor/derp
 cd vendor/derp
 git fetch https://github.com/parixxshit/vendor_derp.git
-git cherry-pick 82a4247dfd884cec0a177fb1b4c9407da7abc863 4edc8123ba3dc98f515f25a17ed3d97af39f6f22
-cd ../..
+git cherry-pick 82a4247 4edc812
+cd ..
 
-# . build/envsetup.sh
+# Patch vendor/qcom/opensource/fm-commonsys
+cd qcom/opensource/fm-commonsys
+git fetch https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git
+git cherry-pick 74f4211
+cd ../../../..
+
+. build/envsetup.sh
 # lunch derp_spes-user && mka derp
