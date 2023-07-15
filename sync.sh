@@ -3,7 +3,6 @@ rm -rf hardware/st/nfc
 rm -rf packages/apps/Dialer
 rm -rf packages/apps/Contacts
 rm -rf packages/apps/Messaging
-rm -rf packages/resources/devicesettings
 
 # Device
 git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
@@ -21,7 +20,6 @@ git clone -b topaz https://gitlab.com/ThankYouMario/android_vendor_xiaomi_sm6225
 git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git packages/apps/Dialer
 git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
 git clone -b tokui https://github.com/P-404/android_packages_apps_Messaging.git packages/apps/Messaging
-git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # Hardware
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
@@ -45,8 +43,14 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
+# Patch packages/resources/devicesettings
+cd packages/resources/devicesettings
+git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
+git cherry-pick ac8b243^..2a3307e
+cd ../..
+
 # Patch packages/apps/Updater
-cd packages/apps/Updater
+cd apps/Updater
 git fetch https://github.com/parixxshit/packages_apps_Updater.git
 git cherry-pick 7554a70
 cd ../../..
