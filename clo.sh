@@ -1,5 +1,5 @@
 # Remove
-# rm -rf hardware/st/nfc
+rm -rf hardware/st/nfc
 
 # Device
 git clone -b lineage-20.0 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
@@ -12,8 +12,8 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
 
 # Hardware
-# git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
-git clone -b lineage-20.0 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
+git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
+git clone -b thirteen https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi
 
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_gps.git hardware/qcom-caf/bengal/gps
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_media.git hardware/qcom-caf/bengal/media
