@@ -1,6 +1,5 @@
 # Remove
 rm -rf hardware/st/nfc
-rm -rf packages/resources/devicesettings
 
 # Device
 git clone -b lineage-20.0 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
@@ -11,9 +10,6 @@ git clone -b thirteen https://github.com/PixelExperience-Devices/device_xiaomi_s
 
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_spes.git vendor/xiaomi/spes
 git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
-
-# Packages
-git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # Hardware
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
@@ -36,6 +32,12 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_core-utils.git vendor/qcom/opensource/core-utils
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
+
+# Patch packages/resources/devicesettings
+cd packages/resources/devicesettings
+git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
+git cherry-pick ac8b243^..2a3307e
+cd ../../..
 
 # Patch vendor/lineage
 cd vendor/lineage
