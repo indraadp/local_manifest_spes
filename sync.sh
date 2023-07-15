@@ -45,6 +45,12 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
+# Patch packages/apps/Updater
+cd packages/apps/Updater
+git fetch https://github.com/parixxshit/packages_apps_Updater.git
+git cherry-pick 7554a70
+cd ../../..
+
 # Patch vendor/derp
 cd vendor/derp
 git fetch https://github.com/parixxshit/vendor_derp.git -t 13-custom
