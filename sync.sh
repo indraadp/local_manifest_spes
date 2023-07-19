@@ -87,6 +87,8 @@ popd
 pushd vendor/derp
 git fetch https://github.com/parixxshit/vendor_derp.git -t 13-custom
 git cherry-pick 95d7761^..cf1f878 # Last 5
+# Add: https://github.com/AOSPA/android_vendor_aospa/commit/79d30123868e4943b563598b0a20d3a1aaf33732
+# Here: https://github.com/DerpFest-AOSP/vendor_derp/blob/13/config/common.mk "Blur"
 popd
 
 # Patch vendor/qcom/opensource/fm-commonsys
