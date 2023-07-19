@@ -4,6 +4,7 @@ rm -rf packages/apps/Dialer
 rm -rf packages/apps/Contacts
 rm -rf packages/apps/Messaging
 rm -rf packages/apps/ExactCalculator
+rm -rf packages/resources/devicesettings
 
 # Device
 git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
@@ -22,6 +23,7 @@ git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git pac
 git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
 git clone -b tokui https://github.com/P-404/android_packages_apps_Messaging.git packages/apps/Messaging
 git clone -b tokui https://github.com/P-404/android_packages_apps_ExactCalculator.git packages/apps/ExactCalculator
+git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # Hardware
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
@@ -58,10 +60,10 @@ git cherry-pick 1a7aa02 # Adapt sepolicy for DerpFest
 popd
 
 # Patch packages/resources/devicesettings
-pushd packages/resources/devicesettings
-git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
-git cherry-pick ac8b243^..2a3307e # Add custom strings
-popd
+# pushd packages/resources/devicesettings
+# git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
+# git cherry-pick ac8b243^..2a3307e # Add custom strings
+# popd
 
 # Patch packages/apps/Updater
 pushd packages/apps/Updater
