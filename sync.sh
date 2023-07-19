@@ -44,40 +44,41 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
 # Patch vendor/qcom/common
-cd device/qcom/common
+pushd device/qcom/common
 git fetch https://github.com/parixxshit/device_qcom_common.git
 git cherry-pick feb9d85 # Adapt FCM for DerpFest
-cd ../../..
+popd
 
 # Patch device/qcom/common-sepolicy
-cd device/qcom/common-sepolicy
+pushd device/qcom/common-sepolicy
 git fetch https://github.com/parixxshit/device_qcom_common-sepolicy.git
 git cherry-pick 1a7aa02 # Adapt sepolicy for DerpFest
-cd ../../..
+popd
 
 # Patch packages/resources/devicesettings
-cd packages/resources/devicesettings
+pushd packages/resources/devicesettings
 git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
 git cherry-pick ac8b243^..2a3307e # Add custom strings
-cd ../..
+popd
 
 # Patch packages/apps/Updater
-cd apps/Updater
+pushd packages/apps/Updater
 git fetch https://github.com/parixxshit/packages_apps_Updater.git
 git cherry-pick 7554a70 # Update server and changelog url
-cd ../../..
+popd
 
 # Patch vendor/derp
-cd vendor/derp
+pushd vendor/derp
 git fetch https://github.com/parixxshit/vendor_derp.git -t 13-custom
 git cherry-pick 95d7761^..cf1f878 # Last 5
-cd ..
+popd
 
 # Patch vendor/qcom/opensource/fm-commonsys
-cd qcom/opensource/fm-commonsys
+pushd vendor/qcom/opensource/fm-commonsys
 git fetch https://github.com/PixelExperience/vendor_qcom_opensource_fm-commonsys.git
 git cherry-pick 74f4211 # Define soong namespace
-cd ../../../..
+popd
 
+# Build
 . build/envsetup.sh
-# lunch derp_spes-user && mka derp
+lunch derp_spes-user && mka derp
