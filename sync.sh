@@ -47,6 +47,12 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
+# Patch frameworks/base
+pushd frameworks/base
+git fetch https://github.com/parixxshit/android_frameworks_base.git
+git cherry-pick 8b318b0 50ab912 # Guard BoostFramework with overlay
+popd
+
 # Patch vendor/qcom/common
 pushd device/qcom/common
 git fetch https://github.com/parixxshit/device_qcom_common.git
