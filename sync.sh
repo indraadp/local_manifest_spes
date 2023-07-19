@@ -3,7 +3,7 @@ rm -rf hardware/st/nfc
 rm -rf packages/apps/Dialer
 rm -rf packages/apps/Contacts
 rm -rf packages/apps/Messaging
-rm -rf packages/apps/ExactCalculator
+# rm -rf packages/apps/ExactCalculator
 rm -rf packages/resources/devicesettings
 
 # Device
@@ -22,7 +22,7 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git packages/apps/Dialer
 git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
 git clone -b tokui https://github.com/P-404/android_packages_apps_Messaging.git packages/apps/Messaging
-git clone -b tokui https://github.com/P-404/android_packages_apps_ExactCalculator.git packages/apps/ExactCalculator
+# git clone -b tokui https://github.com/P-404/android_packages_apps_ExactCalculator.git packages/apps/ExactCalculator
 git clone -b thirteen https://github.com/PixelExperience/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # Hardware
@@ -35,10 +35,10 @@ git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_benga
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
 
 # Device (QCOM)
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common # Adapt FCM for DerpFest
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
-git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common-sepolicy.git device/qcom/common-sepolicy # Adapt sepolicy for DerpFest
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_vendor-common.git device/qcom/vendor-common
 
 # Vendor (QCOM)
@@ -69,6 +69,12 @@ popd
 # pushd packages/resources/devicesettings
 # git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
 # git cherry-pick ac8b243^..2a3307e # Add custom strings
+# popd
+
+# Patch vendor/qcom/opensource/interfaces
+# pushd qcom/opensource/interfaces
+# git fetch https://github.com/PixelExperience/vendor_qcom_opensource_interfaces.git
+# git cherry-pick 0a1e849 # Introduce the QTI FM HAL
 # popd
 
 # Patch packages/apps/Updater
