@@ -49,7 +49,7 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 
 # Patch frameworks/base
 pushd frameworks/base
-git fetch https://github.com/parixxshit/android_frameworks_base.git
+git fetch https://github.com/parixxshit/frameworks_base.git
 git cherry-pick 8b318b0 50ab912 # Guard BoostFramework with overlay
 popd
 
