@@ -31,7 +31,7 @@ git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_benga
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
 
 # Device (QCOM)
-git clone -b 13 https://github.com/parixxshit/device_qcom_common.git device/qcom/common
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_qssi.git device/qcom/qssi
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_wlan.git device/qcom/wlan
 git clone -b 13 https://github.com/parixxshit/device_qcom_common-sepolicy.git device/qcom/common-sepolicy
@@ -42,6 +42,12 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_core-utils.git vendor/qcom/opensource/core-utils
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
+
+# Patch
+cd device/qcom/common
+git fetch https://github.com/parixxshit/device_qcom_common.git
+git cherry-pick feb9d85 # Adapt FCM for DerpFest
+cd ../../..
 
 # Patch packages/resources/devicesettings
 cd packages/resources/devicesettings
