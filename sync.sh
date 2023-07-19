@@ -3,6 +3,7 @@ rm -rf hardware/st/nfc
 rm -rf packages/apps/Dialer
 rm -rf packages/apps/Contacts
 rm -rf packages/apps/Messaging
+rm -rf packages/apps/ExactCalculator
 
 # Device
 git clone -b 13 https://github.com/parixxshit/device_xiaomi_spes.git device/xiaomi/spes
@@ -20,6 +21,7 @@ git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/ve
 git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git packages/apps/Dialer
 git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
 git clone -b tokui https://github.com/P-404/android_packages_apps_Messaging.git packages/apps/Messaging
+git clone -b tokui https://github.com/P-404/android_packages_apps_ExactCalculator.git packages/apps/ExactCalculator
 
 # Hardware
 git clone -b thirteen https://github.com/PixelExperience/hardware_st_nfc.git hardware/st/nfc
