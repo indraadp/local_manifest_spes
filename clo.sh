@@ -33,6 +33,12 @@ git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys_dpm.git vendor/qcom/opensource/commonsys/dpm
 git clone -b thirteen https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-intf_bluetooth.git vendor/qcom/opensource/commonsys-intf/bluetooth
 
+# Patch frameworks/base
+cd frameworks/base
+git fetch https://github.com/parixxshit/android_frameworks_base.git
+git cherry-pick 419fa2b^..ff5239d # CLO Framework Boost (8 commits)
+cd ../..
+
 # Patch packages/resources/devicesettings
 cd packages/resources/devicesettings
 git fetch https://github.com/Deepak5310/android_packages_resources_devicesettings.git
