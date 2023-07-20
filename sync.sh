@@ -59,6 +59,12 @@ git fetch https://github.com/parixxshit/device_qcom_common.git
 git cherry-pick feb9d85 # Adapt FCM for DerpFest
 popd
 
+# Patch packages/apps/Settings
+pushd packages/apps/Settings
+git fetch https://github.com/parixxshit/packages_apps_Settings.git
+git cherry-pick 0631144 be06b4e # Remove Updater and Game Space support
+popd
+
 # Patch device/qcom/common-sepolicy
 pushd device/qcom/common-sepolicy
 git fetch https://github.com/parixxshit/device_qcom_common-sepolicy.git
