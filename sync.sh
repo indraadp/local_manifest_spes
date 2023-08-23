@@ -17,10 +17,6 @@ git clone -b thirteen --depth=1 https://github.com/PixelExperience-Devices/devic
 git clone -b thirteen --depth=1 https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_spes.git vendor/xiaomi/spes
 git clone -b thirteen --depth=1 https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common.git vendor/xiaomi/sm6225-common
 
-# MIUI Camera
-git clone -b thirteen --depth=1 https://github.com/PixelExperience-Devices/device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
-git clone -b thirteen --depth=1 https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common-miuicamera.git vendor/xiaomi/sm6225-common-miuicamera
-
 # Packages
 git clone -b tokui https://github.com/P-404/android_packages_apps_Dialer.git packages/apps/Dialer
 git clone -b tokui https://github.com/P-404/android_packages_apps_Contacts.git packages/apps/Contacts
@@ -35,6 +31,10 @@ git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_benga
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_media.git hardware/qcom-caf/bengal/media
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_audio.git hardware/qcom-caf/bengal/audio
 git clone -b thirteen https://github.com/PixelExperience/hardware_qcom-caf_bengal_display.git hardware/qcom-caf/bengal/display
+
+# Camera (MIUI)
+git clone -b thirteen https://github.com/PixelExperience-Devices/device_xiaomi_sm6225-common-miuicamera.git device/xiaomi/sm6225-common-miuicamera
+git clone -b thirteen https://gitlab.pixelexperience.org/android/vendor-blobs/vendor_xiaomi_sm6225-common-miuicamera.git vendor/xiaomi/sm6225-common-miuicamera
 
 # Device (QCOM)
 git clone -b thirteen https://github.com/PixelExperience-Devices/device_qcom_common.git device/qcom/common # Adapt FCM for DerpFest
@@ -52,7 +52,7 @@ git clone -b thirteen --depth=1 https://github.com/PixelExperience/vendor_qcom_o
 # Patch frameworks/base
 pushd frameworks/base
 git fetch https://github.com/parixxshit/frameworks_base.git
-git cherry-pick 8b318b0 50ab912 # Guard BoostFramework with overlay
+git cherry-pick 8b318b0 50ab912 # Revert Kill BoostFramework logcat spam and Guard BoostFramework with overlay
 popd
 
 # Patch vendor/qcom/common
@@ -65,6 +65,12 @@ popd
 pushd packages/apps/Settings
 git fetch https://github.com/parixxshit/packages_apps_Settings.git
 git cherry-pick 0631144 be06b4e # Remove Updater and Game Space support
+popd
+
+# Patch vendor/pixel-framework
+pushd vendor/pixel-framework
+git fetch https://github.com/parixxshit/vendor_pixel-framework.git
+git cherry-pick cbafd53 # Remove Updater
 popd
 
 # Patch device/qcom/common-sepolicy
