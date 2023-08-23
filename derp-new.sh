@@ -114,7 +114,7 @@ clone_repo "https://github.com/PixelExperience/vendor_qcom_opensource_commonsys-
 
 # Applying patches
 divider
-apply_patch "frameworks/base" "https://github.com/parixxshit/device_qcom_common.git" "13" "8b318b0, 50ab912"
+apply_patch "frameworks/base" "https://github.com/parixxshit/device_qcom_common.git" "13" "8b318b0" "50ab912"
 apply_patch "device/qcom/common" "https://github.com/parixxshit/device_qcom_common.git" "13" "feb9d85"
 apply_patch "device/qcom/common-sepolicy" "https://github.com/parixxshit/device_qcom_common-sepolicy.git" "13" "e4c9045"
 apply_patch "packages/apps/Settings" "https://github.com/parixxshit/packages_apps_Settings.git" "13" "0631144, be06b4e"
